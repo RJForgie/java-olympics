@@ -1,5 +1,7 @@
 package com.example.ryanforgie.olympics;
 
+import java.util.ArrayList;
+
 /**
  * Created by ryanforgie on 15/09/2017.
  */
@@ -8,17 +10,13 @@ public abstract class Competitor {
 
     private Country country;
     private Sport sport;
-    private int goldCount;
-    private int silverCount;
-    private int bronzeCount;
+    private ArrayList<Medal> haul;
 
 
     public Competitor(Country country, Sport sport) {
         this.country = country;
         this.sport = sport;
-        goldCount = 0;
-        silverCount = 0;
-        bronzeCount = 0;
+        haul = new ArrayList<>();
     }
 
     public Country getCountry() {
@@ -29,15 +27,7 @@ public abstract class Competitor {
         return sport;
     }
 
-    public int getGoldCount() {
-        return goldCount;
-    }
-
-    public int getSilverCount() {
-        return silverCount;
-    }
-
-    public int getBronzeCount() {
-        return bronzeCount;
+    public ArrayList<Medal> getHaul() {
+        return haul;
     }
 }

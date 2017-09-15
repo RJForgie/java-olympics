@@ -9,11 +9,13 @@ import java.util.ArrayList;
 public class Team extends Competitor {
 
     private ArrayList<Athlete> members;
+    private int teamskill;
 
 
     public Team(Country country, Sport sport) {
         super(country, sport);
         members = new ArrayList<>();
+        teamskill = 0;
     }
 
 
@@ -21,8 +23,17 @@ public class Team extends Competitor {
         return members;
     }
 
+    public int getTeamskill() {
+        return teamskill;
+    }
+
     public void addAthlete(Athlete athlete) {
         if ((athlete.getCountry() == this.getCountry()) && (athlete.getSport() == this.getSport()))
         members.add(athlete);
+        teamskill += athlete.getSkill();
     }
+
+
+
+
 }

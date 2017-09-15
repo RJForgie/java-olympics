@@ -36,6 +36,11 @@ public class TeamTest {
     }
 
     @Test
+    public void testTeamSkillStartsZero() {
+        assertEquals(0, team1.getTeamskill());
+    }
+
+    @Test
     public void testAddAthleteToTeam() {
         team1.addAthlete(athlete1);
         assertEquals(1, team1.getMembers().size());
@@ -51,6 +56,13 @@ public class TeamTest {
     public void testCantAddAthleteWithWrongSport(){
         team1.addAthlete(athlete3);
         assertEquals(0, team1.getMembers().size());
+    }
+
+    @Test
+    public void testTeamSkill() {
+        team1.addAthlete(athlete1);
+        team1.addAthlete((athlete2));
+        assertEquals(14, team1.getTeamskill());
     }
 
 

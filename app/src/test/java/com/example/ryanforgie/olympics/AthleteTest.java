@@ -33,4 +33,9 @@ public class AthleteTest {
         assertEquals(Sport.TRIATHALON, athlete1.getSport());
     }
 
+    @Test
+    public void testAthleteStartsWithNoMedals(){
+        assertEquals(0, athlete1.getHaul().size());
+    }
+
 }
