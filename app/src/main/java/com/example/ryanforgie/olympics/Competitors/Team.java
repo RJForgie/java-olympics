@@ -1,4 +1,6 @@
-package com.example.ryanforgie.olympics;
+package com.example.ryanforgie.olympics.Competitors;
+
+import com.example.ryanforgie.olympics.Sport;
 
 import java.util.ArrayList;
 
@@ -18,19 +20,24 @@ public class Team extends Competitor {
         teamskill = 0;
     }
 
-
     public ArrayList<Athlete> getMembers() {
         return members;
     }
 
-    public int getTeamskill() {
+    public int getSkill() {
         return teamskill;
     }
 
     public void addAthlete(Athlete athlete) {
-        if ((athlete.getCountry() == this.getCountry()) && (athlete.getSport() == this.getSport()))
-        members.add(athlete);
-        teamskill += athlete.getSkill();
+        if ((athlete.getCountry() == this.getCountry()) && (athlete.getSport() == this.getSport())) {
+            members.add(athlete);
+            teamskill += athlete.getSkill();
+        }
+    }
+
+    public void removeAthlete(Athlete athlete) {
+        members.remove(athlete);
+        teamskill -= athlete.getSkill();
     }
 
 

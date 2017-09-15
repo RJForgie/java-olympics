@@ -1,5 +1,9 @@
 package com.example.ryanforgie.olympics;
 
+import com.example.ryanforgie.olympics.Competitors.Athlete;
+import com.example.ryanforgie.olympics.Competitors.Country;
+import com.example.ryanforgie.olympics.Competitors.Team;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,7 +41,7 @@ public class TeamTest {
 
     @Test
     public void testTeamSkillStartsZero() {
-        assertEquals(0, team1.getTeamskill());
+        assertEquals(0, team1.getSkill());
     }
 
     @Test
@@ -62,7 +66,22 @@ public class TeamTest {
     public void testTeamSkill() {
         team1.addAthlete(athlete1);
         team1.addAthlete((athlete2));
-        assertEquals(14, team1.getTeamskill());
+        assertEquals(14, team1.getSkill());
+    }
+
+    @Test
+    public void testRemoveAthlete() {
+        team1.addAthlete(athlete1);
+        team1.removeAthlete((athlete1));
+        assertEquals(0, team1.getMembers().size());
+    }
+
+    @Test
+    public void testTeamSkillUpdatesWhenAthleteRemoved(){
+        team1.addAthlete(athlete1);
+        team1.addAthlete((athlete2));
+        team1.removeAthlete((athlete2));
+        assertEquals(6, team1.getSkill());
     }
 
 

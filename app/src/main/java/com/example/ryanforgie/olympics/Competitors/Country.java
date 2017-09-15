@@ -1,4 +1,4 @@
-package com.example.ryanforgie.olympics;
+package com.example.ryanforgie.olympics.Competitors;
 
 /**
  * Created by ryanforgie on 15/09/2017.

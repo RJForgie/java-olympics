@@ -1,5 +1,8 @@
 package com.example.ryanforgie.olympics;
 
+import com.example.ryanforgie.olympics.Competitors.Athlete;
+import com.example.ryanforgie.olympics.Competitors.Country;
+
 import org.junit.Before;
 import org.junit.Test;
 

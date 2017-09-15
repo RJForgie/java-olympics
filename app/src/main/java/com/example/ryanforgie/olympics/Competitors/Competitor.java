@@ -1,4 +1,7 @@
-package com.example.ryanforgie.olympics;
+package com.example.ryanforgie.olympics.Competitors;
+
+import com.example.ryanforgie.olympics.Medal;
+import com.example.ryanforgie.olympics.Sport;
 
 import java.util.ArrayList;
 
@@ -30,4 +33,6 @@ public abstract class Competitor {
     public ArrayList<Medal> getHaul() {
         return haul;
     }
+
+    public abstract int getSkill();
 }
