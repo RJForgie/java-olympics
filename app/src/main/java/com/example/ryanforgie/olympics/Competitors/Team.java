@@ -11,13 +11,13 @@ import java.util.ArrayList;
 public class Team extends Competitor {
 
     private ArrayList<Athlete> members;
-    private int teamskill;
+    private int skill;
 
 
     public Team(Country country, Sport sport) {
         super(country, sport);
         members = new ArrayList<>();
-        teamskill = 0;
+        skill = 0;
     }
 
     public ArrayList<Athlete> getMembers() {
@@ -25,20 +25,22 @@ public class Team extends Competitor {
     }
 
     public int getSkill() {
-        return teamskill;
+        return skill;
     }
 
     public void addAthlete(Athlete athlete) {
         if ((athlete.getCountry() == this.getCountry()) && (athlete.getSport() == this.getSport())) {
             members.add(athlete);
-            teamskill += athlete.getSkill();
+            skill += athlete.getSkill();
         }
     }
 
     public void removeAthlete(Athlete athlete) {
         members.remove(athlete);
-        teamskill -= athlete.getSkill();
+        skill -= athlete.getSkill();
     }
+
+
 
 
 
