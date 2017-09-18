@@ -7,4 +7,6 @@ package com.example.ryanforgie.olympics;
 public interface Winnable {
     public void play();
 
+    //interface a bit redundant at the moment, delete or change?
+
 }

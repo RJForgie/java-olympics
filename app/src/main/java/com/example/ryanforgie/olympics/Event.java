@@ -78,14 +78,14 @@ public class Event implements Winnable{
     }
 
     public Medal getMedalByType(MedalType type){
-        Medal retreivedMedal = null;
+        Medal retrievedMedal = null;
         for (Medal medal: eventMedals){
             if(medal.getMedalType() == type){
-                retreivedMedal = medal;
+                retrievedMedal = medal;
             }
         }
 
-        return retreivedMedal;
+        return retrievedMedal;
     }
 
     public void play() {
